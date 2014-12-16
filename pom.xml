@@ -3,13 +3,13 @@
     <groupId>uk.ac.ebi.pride</groupId>
     <artifactId>px-submission-validator</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.0</version>
+    <version>1.0.0-SNAPSHOT</version>
     <name>px-submission-validator</name>
 
     <!-- for release-->
     <scm>
-        <connection>scm:git:ssh://git@github.com:proteomexchange/px-submission-validator.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com:proteomexchange/px-submission-validator.git</developerConnection>
+        <connection>scm:git:git@github.com:proteomexchange/px-submission-validator.git</connection>
+        <developerConnection>scm:git:git@github.com:proteomexchange/px-submission-validator.git</developerConnection>
         <url>https://github.com/proteomexchange/px-submission-validator</url>
         <tag>px-submission-validator-1.0.0</tag>
     </scm>
