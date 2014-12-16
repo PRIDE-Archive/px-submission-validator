@@ -7,6 +7,14 @@
     <version>1.0-SNAPSHOT</version>
     <name>px-submission-validator</name>
 
+    <!-- for release-->
+    <scm>
+        <connection>scm:git:ssh://github.com:proteomexchange/px-submission-validator.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:proteomexchange/px-submission-validator.git</developerConnection>
+        <url>https://github.com/proteomexchange/px-submission-validator</url>
+        <tag>HEAD</tag>
+    </scm>
+
 
     <properties>
         <mockito-core.version>1.9.5</mockito-core.version>
@@ -149,4 +157,17 @@
             </snapshots>
         </repository>
     </repositories>
+
+    <distributionManagement>
+        <!-- EBI repo -->
+        <repository>
+            <id>nexus-ebi-repo</id>
+            <url>http://www.ebi.ac.uk/intact/maven/nexus/content/repositories/ebi-repo</url>
+        </repository>
+        <!-- EBI SNAPSHOT repo -->
+        <snapshotRepository>
+            <id>nexus-ebi-repo-snapshots</id>
+            <url>http://www.ebi.ac.uk/intact/maven/nexus/content/repositories/ebi-repo-snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
