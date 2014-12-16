@@ -8,7 +8,7 @@
 
     <!-- for release-->
     <scm>
-        <connection>scm:git:ssh://github.com:proteomexchange/px-submission-validator.git</connection>
+        <connection>scm:git:ssh://git@github.com:proteomexchange/px-submission-validator.git</connection>
         <developerConnection>scm:git:ssh://git@github.com:proteomexchange/px-submission-validator.git</developerConnection>
         <url>https://github.com/proteomexchange/px-submission-validator</url>
         <tag>px-submission-validator-1.0.0</tag>
