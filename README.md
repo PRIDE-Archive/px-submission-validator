@@ -8,7 +8,16 @@ At the moment, the px-submission-validator supports:
   
 ## How To
 
+The px-submission-validator currently offers a group of XML schema validators. You can either use individual validator
+ or use the aggregated validator.
 
+For individual validator, providing you know the file format, you can choose a validator in the _uk.ac.ebi.pride.validator.schema_ package.
+
+For example, you have a mzML file need to be validated. You can do the following in your code:
+  MzMLSchemaValidator mzmlSchemaValidator = new MzMLSchemaValidator(new URI("http://www.psidev.info/files/ms/mzML/xsd/mzML1.1.0.xsd"));
+  mzmlSchemaValidator.validate([your file])
+
+For aggregated validator, in case of you want to valid multiple file formats.
 
 ## Maven dependency
 You need to add the following repository to your project's pom file:
