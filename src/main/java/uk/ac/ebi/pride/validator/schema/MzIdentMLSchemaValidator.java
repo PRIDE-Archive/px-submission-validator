@@ -22,7 +22,7 @@ public class MzIdentMLSchemaValidator extends GenericXmlSchemaValidator{
     public boolean support(File input) {
         try {
             MassSpecFileFormat fileFormat = MassSpecFileFormat.checkFormat(input);
-            return fileFormat != null && fileFormat.equals(MassSpecFileFormat.PRIDE);
+            return fileFormat != null && fileFormat.equals(MassSpecFileFormat.MZIDENTML);
         } catch (IOException e) {
             throw new IllegalStateException("Failed to check file format: " + input.getAbsolutePath(), e);
         }
