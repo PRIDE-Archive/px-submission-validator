@@ -18,7 +18,10 @@ For example, you have a mzML file need to be validated. You can do the following
   MzMLSchemaValidator mzmlSchemaValidator = new MzMLSchemaValidator(new URI("http://www.psidev.info/files/ms/mzML/xsd/mzML1.1.0.xsd"));
   mzmlSchemaValidator.validate([your file])
 
-For aggregated validator, in case of you want to valid multiple file formats.
+For aggregated validator, in case of you want to valid multiple files in different file format, you can use _PxXmlSchemaValidatorFactory_:
+
+  IValidator<File, String> schemaValidator = PxXmlSchemaValidatorFactory.getPxXmlSchemaValidator();
+  schemaValidator.validate([your file])
 
 ## Maven dependency
 You need to add the following repository to your project's pom file:
