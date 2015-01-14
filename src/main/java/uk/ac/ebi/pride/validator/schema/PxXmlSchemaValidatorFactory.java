@@ -34,8 +34,11 @@ public final class PxXmlSchemaValidatorFactory {
 
             // mzML validator
             MzMLSchemaValidator mzMLSchemaValidator = new MzMLSchemaValidator(new URI(DEFAULT_MZML_SCHEMA));
+            
+            // MGF validator
+           MGFValidator mgfValidator = new MGFValidator();
 
-            return Validators.compose(prideXmlSchemaValidator, mzIdentMLSchemaValidator, mzMLSchemaValidator);
+            return Validators.compose(prideXmlSchemaValidator, mzIdentMLSchemaValidator, mzMLSchemaValidator, mgfValidator);
         } catch (URISyntaxException e) {
             throw new IllegalStateException("Failed to initialize validators", e);
         }
