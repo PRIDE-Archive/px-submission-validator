@@ -25,11 +25,11 @@ public final class Validators {
             @Override
             public boolean support(V input) {
                 for (IValidator<V, ? extends T> validator : validators) {
-                    if (!validator.support(input)) {
-                        return false;
+                    if (validator.support(input)) {
+                        return true;
                     }
                 }
-                return true;
+                return false;
             }
 
             private IValidator<V, ? extends T> select(V input) {
