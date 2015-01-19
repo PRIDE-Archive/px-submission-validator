@@ -23,6 +23,7 @@ public final class PxXmlSchemaValidatorFactory {
     public static final String DEFAULT_PRIDE_XML_SCHEMA = "http://ftp.pride.ebi.ac.uk/pride/resources/schema/pride/pride.xsd";
     public static final String DEFAULT_MZIDENTML_SCHEMA = "http://www.psidev.info/sites/default/files/mzIdentML1.1.0.xsd";
     public static final String DEFAULT_MZML_SCHEMA = "http://www.psidev.info/files/ms/mzML/xsd/mzML1.1.0.xsd";
+    public static final String DEFAULT_INDEXED_MZML_SCHEMA = "http://www.psidev.info/files/ms/mzML/xsd/mzML1.1.1_idx.xsd";
 
     public static IValidator<File, String> getPxXmlSchemaValidator() {
         try {
@@ -33,12 +34,15 @@ public final class PxXmlSchemaValidatorFactory {
             MzIdentMLSchemaValidator mzIdentMLSchemaValidator = new MzIdentMLSchemaValidator(new URI(DEFAULT_MZIDENTML_SCHEMA));
 
             // mzML validator
+            IndexedMzMLSchemaValidator indexedMzMLSchemaValidator = new IndexedMzMLSchemaValidator(new URI(DEFAULT_INDEXED_MZML_SCHEMA));
+
+            // mzML validator
             MzMLSchemaValidator mzMLSchemaValidator = new MzMLSchemaValidator(new URI(DEFAULT_MZML_SCHEMA));
             
             // MGF validator
            MGFValidator mgfValidator = new MGFValidator();
 
-            return Validators.compose(prideXmlSchemaValidator, mzIdentMLSchemaValidator, mzMLSchemaValidator, mgfValidator);
+            return Validators.compose(prideXmlSchemaValidator, mzIdentMLSchemaValidator, indexedMzMLSchemaValidator, mzMLSchemaValidator, mgfValidator);
         } catch (URISyntaxException e) {
             throw new IllegalStateException("Failed to initialize validators", e);
         }
