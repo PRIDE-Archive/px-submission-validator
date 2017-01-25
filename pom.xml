@@ -115,6 +115,5 @@
         <connection>scm:git:git@github.com:proteomexchange/px-submission-validator.git</connection>
         <developerConnection>scm:git:git@github.com:proteomexchange/px-submission-validator.git</developerConnection>
         <url>https://github.com/proteomexchange/px-submission-validator</url>
-        <!--- <tag>px-submission-validator-1.0.0</tag> -->
     </scm>
 </project>
